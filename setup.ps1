@@ -40,7 +40,18 @@ function Invoke-GitClone {
     )
 
     Write-Verbose "Cloning from '$Url' to '$Path'..."
-    & git clone $Url $Path --progress 2>&1
+    $gitOutput = (& git clone $Url $Path --progress 2>&1)
+    if ($null -eq $gitOutput) {
+        throw 'Invalid empty output received from git clone!'
+    }
+
+    $doneOutput = $gitOutput | Where-Object { $_.ToString().Contains("done.")  }
+    if ($null -eq $doneOutput -or $doneOutput.Count -eq 0) {
+        $gitOutput | Write-Host
+        return
+    }
+
+    Write-Host "Successfully cloned from '$Url' to '$Path'!"
 }
 
 # This function will simply run git pull command (in the current pwd).
