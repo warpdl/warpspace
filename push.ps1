@@ -10,7 +10,7 @@ param (
     [Parameter(Mandatory = $false, ValueFromPipeline = $true, Position = 0)]
     [string]$Message = $null,
     [Parameter(Mandatory = $false)]
-    [string[]]$Target = @("warp", "warplib")
+    [string[]]$Target = @("warpdl", "warplib")
 )
 
 function Invoke-GitOperation {

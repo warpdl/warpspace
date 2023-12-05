@@ -13,7 +13,7 @@ param (
     [string]$WarpLibPath = 'warplib',
     [Parameter(Mandatory = $false)]
     [ValidateNotNullOrEmpty()]
-    [string]$WarpCorePath = 'warp'
+    [string]$WarpCorePath = 'warpdl'
 )
 
 # This function gets called whenever the specified directory by user already

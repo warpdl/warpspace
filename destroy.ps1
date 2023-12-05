@@ -17,7 +17,7 @@ if ([string]::IsNullOrEmpty($BasePath)) {
 
 $BasePath = $BasePath.TrimEnd('\')
 Remove-Item -Path "$BasePath\warplib" -Recurse -Force -ErrorAction "SilentlyContinue"
-Remove-Item -Path "$BasePath\warp" -Recurse -Force -ErrorAction "SilentlyContinue"
+Remove-Item -Path "$BasePath\warpdl" -Recurse -Force -ErrorAction "SilentlyContinue"
 Remove-Item -Path "$BasePath\go.work" -Recurse -Force -ErrorAction "SilentlyContinue"
 
 Write-Output "Destroyed WarpDL Workspace!"

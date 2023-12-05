@@ -13,7 +13,7 @@ EOF
 
 WORG="https://github.com/warpdl"
 WLIB=warplib
-WCOR=warp
+WCOR=warpdl
 
 es() {
 	echo

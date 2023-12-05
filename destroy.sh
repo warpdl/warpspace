@@ -10,7 +10,7 @@ exec() {
 }
 
 exec "rm -rf warplib"
-exec "rm -rf warp"
+exec "rm -rf warpdl"
 exec "rm go.work"
 
 echo "Destroyed WarpDL Workspace!"
